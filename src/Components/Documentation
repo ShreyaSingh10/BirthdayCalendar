@@ -1,0 +1,21 @@
+Documentation
+
+
+-I have created all my components inside the src/Components folder
+-I have three components namely 
+	- BirthdayContainer
+	- BirthdatCard
+	- InputArea
+
+-I have one css file named styles.css
+-I have one file storing the required data for testing
+-I have one file having a function validator
+-I have one file for the documentation of the project
+
+
+What is happening in the project-
+
+The user enter some JSON response in the text area and then eneter a year, 
+upon clicking on update -> We will filter out the values matching our year and loop through the new array and store in respective arrays for different weekdays.
+After that we will set them in the state and the cards will be able to display the data.
+

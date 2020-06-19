@@ -3,8 +3,6 @@ import './styles.css';
 import BirthdayCard from './BirthdayCard';
 import InputArea from './InputArea';
 
-//todo sorting
-//handling submit on clicking once - done
 class BirthdayContainer extends React.Component {
 
 	state={
@@ -20,17 +18,17 @@ class BirthdayContainer extends React.Component {
 	}
 
 	refresh =() => {
-			this.setState({
-			yearData:'',
-			mon: [],
-	        tue: [],
-	        wed: [],
-	        thu: [],
-	        fri: [],
-	        sat: [],
-	        sun: [],
-	        yearDisplay:''
-		});
+		this.setState({
+		yearDisplay:'',
+		yearData:'',
+		mon: [],
+        tue: [],
+        wed: [],
+        thu: [],
+        fri: [],
+        sat: [],
+        sun: []
+	});
 	}
 
 	handleData = (dataArr, year) => {
@@ -41,91 +39,91 @@ class BirthdayContainer extends React.Component {
 	        yearDisplay: year
 	      }, 
 	      () => {
-	      	this.state.yearData.map(v => {
-				var birthday = new Date(v.birthday);
+	      	this.state.yearData.map(val => {
+				var birthday = new Date(val.birthday);
 				var day = birthday.getDay();
-				let name = v.name.split(' ');
+				let name = val.name.split(' ');
 				let firstName = name[0][0];
 				let lastName = name[1][0];
 				name = firstName + lastName;
 		  		this.setState(prevstate => {	
 		  			if(day ===0){
-		  				let a= prevstate.sun;
-		  				a.push({name});
+		  				let arr = prevstate.sun;
+		  				arr.push({name});
 		  				return{
-		  					sun:a
+		  					sun:arr
 		  				}
 		  			}
 		  			if(day ===1){
-		  				let a= prevstate.mon;
-		  				a.push({name});
+		  				let arr= prevstate.mon;
+		  				arr.push({name});
 		  				return{
-		  					mon:a
+		  					mon:arr
 		  				}
 		  			}
 		  			if(day ===2){
-		  				let a= prevstate.tue;
-		  				a.push({name});
+		  				let arr= prevstate.tue;
+		  				arr.push({name});
 		  				return{
-		  					tue:a
+		  					tue:arr
 		  				}
 		  			}
 		  			if(day ===3){
-		  				let a= prevstate.wed;
-		  				a.push({name});
+		  				let arr= prevstate.wed;
+		  				arr.push({name});
 		  				return{
-		  					wed:a
+		  					wed:arr
 		  				}
 		  			}
 		  			if(day ===4){
-		  				let a= prevstate.thu;
-		  				a.push({name});
+		  				let arr= prevstate.thu;
+		  				arr.push({name});
 		  				return{
-		  					thu:a
+		  					thu:arr
 		  				}
 		  			}
 		  			if(day ===5){
-		  				let a= prevstate.fri;
-		  				a.push({name});
+		  				let arr= prevstate.fri;
+		  				arr.push({name});
 		  				return{
-		  					fri:a
+		  					fri:arr
 		  				}
 		  			}
 		  			if(day ===6){
-		  				let a= prevstate.sat;
-		  				a.push({name});
+		  				let arr= prevstate.sat;
+		  				arr.push({name});
 		  				return{
-		  					sat:a
+		  					sat:arr
 		  				}
 		  			}
 
 		  		});
 	      	});
-	      }) 
-		}
+	    }) 
+	}
 
 	render() {
+		const {sun, mon, tue, wed, thu, fri, sat} = this.state;
 		return(
 			<div>
 				<h1 className="main_heading">
-          			<font face="Comic sans MS">Birthday Cal </font>
+          			<font face="Comic sans MS">Birthday Cal</font>
         		</h1>
         		<h3 className="message">
 		          <font face="Comic sans MS">
-		            Birthday's in the year {this.state.yearDisplay}
+		            Birthdays in the year {this.state.yearDisplay}
 		          </font>
 		        </h3>
 		        <div className="cards_container">
-			        <BirthdayCard data={this.state.sun} day="sun"/>
-			        <BirthdayCard data={this.state.mon} day="mon"/>
-			        <BirthdayCard data={this.state.tue} day="tue"/>
-			        <BirthdayCard data={this.state.wed} day="wed"/>
-			        <BirthdayCard data={this.state.thu} day="thu"/>
-			        <BirthdayCard data={this.state.fri} day="fri"/>
-			        <BirthdayCard data={this.state.sat} day="sat"/>
+			        <BirthdayCard data={sun} day="sun"/>
+			        <BirthdayCard data={mon} day="mon"/>
+			        <BirthdayCard data={tue} day="tue"/>
+			        <BirthdayCard data={wed} day="wed"/>
+			        <BirthdayCard data={thu} day="thu"/>
+			        <BirthdayCard data={fri} day="fri"/>
+			        <BirthdayCard data={sat} day="sat"/>
 		        </div>
-		        <InputArea 
-			        getData={this.handleData} />
+		        <InputArea getData={this.handleData} />
 			</div>
 		)
 	}

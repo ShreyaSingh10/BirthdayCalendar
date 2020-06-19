@@ -8,7 +8,7 @@ class InputArea extends React.Component {
 		data:[]
 	}
 
-	handleChange= (e) => {
+	handleInputChange= (e) => {
 		this.setState({
 	      	year: e.target.value,
     	});
@@ -60,7 +60,7 @@ class InputArea extends React.Component {
 	              name="year"
 	              placeholder="Enter a year"
 	              value={this.state.year}
-	              onChange={this.handleChange}
+	              onChange={this.handleInputChange}
 	            />
 	            <button className="submit_button">UPDATE</button>
           </div>

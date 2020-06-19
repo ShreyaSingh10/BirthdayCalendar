@@ -59,20 +59,23 @@ const data =[
       {"name": "Jras Pa", "birthday": "August 21, 2018", "year": "2018"},
       
 
-      {"name": "Son Gan", "birthday": "August 14, 2018", "year": "2018"},
-      {"name": "Nish Ji", "birthday": "August 15, 2018", "year": "2018"},
-      {"name": "Punam Sin", "birthday": "August 16, 2018", "year": "2018"},
-      {"name": "Payu Ja", "birthday": "August 17, 2018", "year": "2018"},
-      {"name": "Avi Kal", "birthday": "August 18, 2018", "year": "2018"},
-      {"name": "Jin Dsou", "birthday": "August 12, 2018", "year": "2018"},
+      {"name": "Son Gan", "birthday": "August 14, 2019", "year": "2019"},
+      {"name": "Nish Ji", "birthday": "August 15, 2019", "year": "2019"},
+      {"name": "Punam Sin", "birthday": "August 16, 2019", "year": "2019"},
+      {"name": "Payu Ja", "birthday": "August 17, 2019", "year": "2019"},
+      {"name": "Avi Kal", "birthday": "August 18, 2019", "year": "2019"},
+      {"name": "Jin Dsou", "birthday": "August 12, 2019", "year": "2019"},
 
-      {"name": "Amar Patha", "birthday": "August 14, 2018", "year": "2018"},
-      {"name": "Mith Chak", "birthday": "August 15, 2018", "year": "2018"},
-      {"name": "Iti Agr", "birthday": "August 16, 2018", "year": "2018"},
-      {"name": "Avi Kal", "birthday": "August 18, 2018", "year": "2018"}
+      {"name": "Amar Patha", "birthday": "August 14, 2018", "year": "2019"},
+      {"name": "Mith Chak", "birthday": "August 15, 2018", "year": "2019"},
+      {"name": "Iti Agr", "birthday": "August 16, 2018", "year": "2019"},
+      {"name": "Avi Kal", "birthday": "August 18, 2018", "year": "2019"},
+
+      {"name": "Amar Patha", "birthday": "August 14, 1995", "year": "2017"},
+      {"name": "Mith Chak", "birthday": "August 15, 1996", "year": "2017"},
+      {"name": "Iti Agr", "birthday": "August 16, 1994", "year": "2017"},
+      {"name": "Avi Kal", "birthday": "August 18, 1993", "year": "2018"}
     ]
-
-
     [
       {"name": "Shreya Ningh", "birthday": "August 19, 2018", "year": "2018"},
       {"name": "Bhreya Kingh", "birthday": "August 20, 2018", "year": "2018"},
@@ -145,9 +148,7 @@ const data =[
       {"name": "Shreya Ningh", "birthday": "August 19, 2018", "year": "2018"},
       {"name": "Bhreya Kingh", "birthday": "August 19, 2018", "year": "2018"},
       {"name": "Shreya Ningh", "birthday": "August 19, 2018", "year": "2018"},
-      {"name": "Bhreya Kingh", "birthday": "August 19, 2018", "year": "2018"}
-      ]
-      ]
+      {"name": "Bhreya Kingh", "birthday": "August 19, 2018", "year": "2018"},
       [{"name": "Shreya Ningh", "birthday": "August 19, 2018", "year": "2018"},
       {"name": "Bhreya Kingh", "birthday": "August 19, 2018", "year": "2018"},
       {"name": "Shreya Ningh", "birthday": "August 19, 2018", "year": "2018"},
