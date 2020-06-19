@@ -2,7 +2,7 @@
   text-align: center;
   overflow-x: hidden;
 }
-.mainHeading {
+.main_heading {
   color: darkturquoise;
   margin-top: 10px;
   font-size: 70px;
@@ -16,9 +16,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding-left: 20px;
+  justify-content: center;
   overflow-x: scroll;
-  margin-right: 30px;
 }
 .header {
   background: linear-gradient(to bottom right, yellow, aquamarine);
@@ -30,14 +29,14 @@
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 }
-.names-background-container {
+.names_background_container {
   height: 180px;
   min-height: 180px;
   width: 180px;
   background: azure;
   overflow-y: scroll;
 }
-.names-Container {
+.names_container {
   width: 180px;
   display: flex;
   flex-direction: row;
@@ -45,58 +44,56 @@
   overflow-y: scroll;
 }
 .cards {
-  margin: 10px;
+  margin: 5px;
 }
-
-.submitButton {
+.submit_button {
   display: block;
   padding: 10px;
   border-radius: 5px;
-  width: 200px;
+  width: 20vw;
   margin-top: 20px;
   background: aquamarine;
   font-size: 20px;
 }
-.smaller-cards1,
-.smaller-cards2,
-.smaller-cards3,
-.smaller-cards4,
-.smaller-cards5,
-.smaller-cards6 {
+.smaller_cards1,
+.smaller_cards2,
+.smaller_cards3,
+.smaller_cards4,
+.smaller_cards5,
+.smaller_cards6 {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.smaller-cards1 {
+.smaller_cards1 {
   height: 180px;
   width: 180px;
 }
-.smaller-cards2 {
+.smaller_cards2 {
   height: 90px;
   width: 90px;
 }
-.smaller-cards3 {
+.smaller_cards3 {
   height: 60px;
   width: 60px;
 }
-.smaller-cards4 {
+.smaller_cards4 {
   height: 45px;
   width: 45px;
 }
-.smaller-cards5 {
+.smaller_cards5 {
   height: 36px;
   width: 36px;
 }
-.smaller-cards6 {
+.smaller_cards6 {
   height: 30px;
   width: 30px;
 }
-.noBirthdayImage {
+.no_birthday_image {
   height: 180px;
   width: 180px;
 }
-
 .data_form {
   margin-top: 10px;
   display: flex;
@@ -105,35 +102,36 @@
   margin-left: 30px;
   margin-right: 30px;
   overflow-x: scroll;
+  justify-content: center;
 }
-.data-input {
+.data_input {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.warningMessage {
+.warning_message {
   color: red;
   margin-top: 0px;
   display: block;
 }
-.data-textarea {
+.data_textarea {
   height: 300px;
-  width: 850px;
-  min-width: 300px;
+  width: 60vw;
+  min-width: 150px;
   border-color: grey;
   display: inline;
 }
-.year-input {
+.year_input {
   margin-left: 10px;
-  width: 600px;
+  width: 30vw;
   padding: 20px;
   border-radius: 5px;
   display: block;
   font-size: 20px;
 }
-.year-value {
-  width: 300px;
+.year_value {
+  width: 20vw;;
   padding: 20px;
   border-radius: 5px;
   display: block;

@@ -5,13 +5,12 @@ class InputArea extends React.Component {
 	state={
 		year:'',
 		error:'',
-		yearDisplay:'',
+		data:[]
 	}
 
 	handleChange= (e) => {
 		this.setState({
 	      	year: e.target.value,
-	      	yearDisplay: e.target.value
     	});
 	}
 
@@ -30,42 +29,40 @@ class InputArea extends React.Component {
 
 	handleSubmit= (e) => {
 		e.preventDefault();
-		//console.log("STATE", this.state);
 		let arr = this.state.data.filter(val => {
       		return val.year === this.state.year;
     	});
-    	//console.log("ARR", arr);
-    	//code hereeee----------
-	      this.props.getData(arr);   	
+    	  this.props.getData(arr, this.state.year); 
+    	  this.setState({year:''});
  		};
 
 
 	render() {
 		return(
 			<form className="data_form" onSubmit={this.handleSubmit}>
-	          <div className="data-input">
-	            <h3 className="warningMessage">
+	          <div className="data_input">
+	            <h3 className="warning_message">
 	              {' '}
 	              <font face="Comic sans MS">{this.state.error}</font>
 	            </h3>
 	            <textarea
-	              className="data-textarea"
+	              className="data_textarea"
 	              name="data"
 	              required
 	              onChange={this.handleData}
 	              placeholder="Enter JSON data"
 	            />
 	          </div>
-	          <div className="year-input">
+	          <div className="year_input">
 	            <input
-	              className="year-value"
+	              className="year_value"
 	              type="text"
 	              name="year"
 	              placeholder="Enter a year"
 	              value={this.state.year}
 	              onChange={this.handleChange}
 	            />
-	            <button className="submitButton">UPDATE</button>
+	            <button className="submit_button">UPDATE</button>
           </div>
         </form>
 		);
