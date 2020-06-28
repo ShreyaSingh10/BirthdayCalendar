@@ -3,7 +3,7 @@ import './styles.css';
 import BirthdayCard from './BirthdayCard';
 import InputArea from './InputArea';
 
-class BirthdayContainer extends React.Component {
+export default class BirthdayContainer extends React.Component {
 
 	state={
 		yearDisplay:'',
@@ -28,7 +28,7 @@ class BirthdayContainer extends React.Component {
         fri: [],
         sat: [],
         sun: []
-	});
+		});
 	}
 
 	handleData = (dataArr, year) => {
@@ -40,64 +40,71 @@ class BirthdayContainer extends React.Component {
 	      }, 
 	      () => {
 	      	this.state.yearData.map(val => {
-				var birthday = new Date(val.birthday);
-				var day = birthday.getDay();
-				let name = val.name.split(' ');
-				let firstName = name[0][0];
-				let lastName = name[1][0];
-				name = firstName + lastName;
-		  		this.setState(prevstate => {	
-		  			if(day ===0){
-		  				let arr = prevstate.sun;
-		  				arr.push({name});
-		  				return{
-		  					sun:arr
-		  				}
-		  			}
-		  			if(day ===1){
-		  				let arr= prevstate.mon;
-		  				arr.push({name});
-		  				return{
-		  					mon:arr
-		  				}
-		  			}
-		  			if(day ===2){
-		  				let arr= prevstate.tue;
-		  				arr.push({name});
-		  				return{
-		  					tue:arr
-		  				}
-		  			}
-		  			if(day ===3){
-		  				let arr= prevstate.wed;
-		  				arr.push({name});
-		  				return{
-		  					wed:arr
-		  				}
-		  			}
-		  			if(day ===4){
-		  				let arr= prevstate.thu;
-		  				arr.push({name});
-		  				return{
-		  					thu:arr
-		  				}
-		  			}
-		  			if(day ===5){
-		  				let arr= prevstate.fri;
-		  				arr.push({name});
-		  				return{
-		  					fri:arr
-		  				}
-		  			}
-		  			if(day ===6){
-		  				let arr= prevstate.sat;
-		  				arr.push({name});
-		  				return{
-		  					sat:arr
-		  				}
-		  			}
+	      		let value = val.birthday.split('/');
+	      		if(value[2]<= year)
+	      		{
+		      		let newValue;
+		      		newValue= [value[1],value[0],year];
+		      		newValue = newValue.join('/');
+					let birthday = new Date(newValue);
+					var day = birthday.getDay();
+					let name = val.name.split(' ');
+					let firstName = name[0][0];
+					let lastName = name[1][0];
+					name = firstName + lastName;
+			  		this.setState(prevstate => {	
+			  			if(day ===0){
+			  				let arr = prevstate.sun;
+			  				arr.push({name});
+			  				return{
+			  					sun:arr
+			  				}
+			  			}
+			  			if(day ===1){
+			  				let arr= prevstate.mon;
+			  				arr.push({name});
+			  				return{
+			  					mon:arr
+			  				}
+			  			}
+			  			if(day ===2){
+			  				let arr= prevstate.tue;
+			  				arr.push({name});
+			  				return{
+			  					tue:arr
+			  				}
+			  			}
+			  			if(day ===3){
+			  				let arr= prevstate.wed;
+			  				arr.push({name});
+			  				return{
+			  					wed:arr
+			  				}
+			  			}
+			  			if(day ===4){
+			  				let arr= prevstate.thu;
+			  				arr.push({name});
+			  				return{
+			  					thu:arr
+			  				}
+			  			}
+			  			if(day ===5){
+			  				let arr= prevstate.fri;
+			  				arr.push({name});
+			  				return{
+			  					fri:arr
+			  				}
+			  			}
+			  			if(day ===6){
+			  				let arr= prevstate.sat;
+			  				arr.push({name});
+			  				return{
+			  					sat:arr
+			  				}
+			  			}
 
-		  		});
+			  		});
+			  	}
 	      	});
 	    }) 
 	}
@@ -128,5 +135,3 @@ class BirthdayContainer extends React.Component {
 		)
 	}
 } 
-
-export default BirthdayContainer;

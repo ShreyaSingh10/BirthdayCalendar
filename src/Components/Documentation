@@ -16,6 +16,7 @@ Documentation
 What is happening in the project-
 
 The user enter some JSON response in the text area and then eneter a year, 
-upon clicking on update -> We will filter out the values matching our year and loop through the new array and store in respective arrays for different weekdays.
+upon clicking on update -> We will sort the array and then display the day on which the birthdays will fall 
+in the year entered by the user
 After that we will set them in the state and the cards will be able to display the data.
 

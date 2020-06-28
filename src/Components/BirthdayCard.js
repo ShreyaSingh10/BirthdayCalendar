@@ -2,7 +2,7 @@ import React from 'react';
 import './styles.css';
 import { validator } from './validator.js';
 
-class BirthdayCard extends React.Component {
+export default class BirthdayCard extends React.Component {
 
 	state={
 		color: [
@@ -17,16 +17,17 @@ class BirthdayCard extends React.Component {
 		]
 	}
 	render(){
+    const {data} = this.props;
 		return(
 			<div className="cards">
         <div className="header">{this.props.day}</div>
         <div className="names_background_container">
           <div className="names_container">
-            {this.props.data.length > 0 ? (
-              this.props.data.map((name, index) => (
+            {data.length > 0 ? (
+              data.map((name, index) => (
                 <div
                   className={`smaller_cards${validator(
-                    this.props.data.length
+                    data.length
                   )}`}
      			  style={{ backgroundColor: this.state.color[index % 7] }}
                 >
@@ -45,5 +46,3 @@ class BirthdayCard extends React.Component {
 		);
 	}
 }
-
-export default BirthdayCard;
